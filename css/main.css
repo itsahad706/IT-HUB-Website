@@ -42,13 +42,23 @@
 ========================================= */
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: "Segoe UI", Arial, sans-serif;
-  background-color: var(--color-dark);
+  background-color: #f1f5f9; /* light neutral background */
   color: var(--color-dark);
   line-height: 1.6;
+}
+
+
+h1, h2, h3, h4 {
+  letter-spacing: -0.5px;
+}
+
+p {
+  line-height: 1.7;
 }
 
 /* =========================================
@@ -93,7 +103,7 @@ body {
   font-weight: 500;
   color: var(--color-dark);
   position: relative;
-}
+} 
 
 .nav__link:hover {
   color: var(--color-primary);
@@ -102,6 +112,28 @@ body {
 .nav__link--active {
   color: var(--color-primary);
 }
+
+
+.nav__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: var(--color-primary);
+  transition: 0.3s ease;
+}
+
+.nav__link:hover::after,
+.nav__link--active::after {
+  width: 100%;
+}
+
+
+
+
+
 
 /* =========================================
    HERO
@@ -139,6 +171,8 @@ body {
   font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
+  text-shadow: 0 10px 30px rgba(0,0,0,0.4);
+
 }
 
 .hero__subtitle {
@@ -189,6 +223,9 @@ body {
 
 /* Stats */
 .hero__stats {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.2);
   display: flex;
   justify-content: center;
   gap: 3rem;
@@ -204,9 +241,23 @@ body {
   color: #cbd5e1;
 }
 
+
+
+
+
+
 /* =========================================
    SECTION
 ========================================= */
+
+.section + .impact,
+.impact + .course-features,
+.course-features + .testimonials,
+.testimonials + .cta {
+  margin-top: -2rem;
+}
+
+
 .section {
   background: var(--color-light);
   padding: var(--section-padding) 0;
@@ -231,6 +282,15 @@ body {
 /* =========================================
    CARDS
 ========================================= */
+
+.card,
+.feature-card,
+.testimonial-card,
+.impact-card {
+  border: 1px solid #e2e8f0;
+}
+
+
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
@@ -496,4 +556,116 @@ body {
 .testimonial-card__author span {
   font-size: 0.85rem;
   color: var(--color-gray);
+}
+
+
+
+
+
+
+
+
+/* =========================================
+   CTA SECTION
+========================================= */
+.cta {
+  position: relative;
+  padding: 7rem 0;
+  background: url("../images/code-network-img.png") center/cover no-repeat;
+  text-align: center;
+}
+
+.cta__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(15,23,42,0.85),
+    rgba(37,99,235,0.85)
+  );
+}
+
+.cta__content {
+  position: relative;
+  color: var(--color-light);
+}
+
+.cta__title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.cta__text {
+  max-width: 40rem;
+  margin: 0 auto 2.5rem;
+  color: #cbd5e1;
+  font-size: 1rem;
+}
+
+.cta__actions {
+  margin-top: 1rem;
+}
+
+
+
+
+
+
+
+
+/* =========================================
+   FOOTER
+========================================= */
+.footer {
+  background: var(--color-light);
+  color: #0f172a;
+  padding: 4rem 0 2rem;
+  text-align: center;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* Grid Layout - Centered */
+.footer__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 2.5rem;
+  justify-items: center;   /* Centers each column */
+  margin-bottom: 3rem;
+}
+
+/* Each Column */
+.footer__column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* Center links inside column */
+}
+
+/* Titles */
+.footer__title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  color: #0f172a;
+}
+
+/* Links */
+.footer__column a {
+  display: block;
+  text-decoration: none;
+  color: #0f172a;
+  font-size: 0.9rem;
+  margin-bottom: 0.7rem;
+  transition: 0.3s ease;
+}
+
+.footer__column a:hover {
+  transform: translateX(4px);
+}
+
+/* Bottom Section */
+.footer__bottom {
+  font-size: 0.85rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e5e7eb;
 }
