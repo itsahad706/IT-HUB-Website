@@ -1,0 +1,133 @@
+/* =========================================
+   HERO
+========================================= */
+
+.courses-hero {
+  padding: 6rem 0;
+  text-align: center;
+  background: var(--color-light);
+}
+
+.courses-hero__title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 1rem;
+}
+
+.courses-hero__subtitle {
+  color: var(--color-gray);
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+/* =========================================
+   COURSES GRID
+========================================= */
+
+.courses {
+  padding: var(--section-padding) 0;
+  background: #f8fafc;
+}
+
+.courses__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  gap: 2.5rem;
+}
+
+/* =========================================
+   COURSE CARD
+========================================= */
+
+.course-card {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.course-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+}
+
+.course-card__image {
+  position: relative;
+}
+
+.course-card__image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.course-card__badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #ef4444;
+  color: #fff;
+  padding: 6px 10px;
+  font-size: 0.75rem;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.badge--yellow {
+  background: #f59e0b;
+}
+
+/* Content */
+.course-card__content {
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.course-card__title {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--color-dark);
+}
+
+.course-card__desc {
+  font-size: 0.95rem;
+  color: var(--color-gray);
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.course-card__meta {
+  font-size: 0.85rem;
+  color: var(--color-gray);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.course-card__price {
+  margin-bottom: 1.5rem;
+}
+
+.price-new {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.price-old {
+  text-decoration: line-through;
+  color: #94a3b8;
+  margin-left: 0.5rem;
+}
+
+/* Button full width */
+.course-card .btn {
+  width: 100%;
+  text-align: center;
+}
