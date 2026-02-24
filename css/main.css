@@ -68,7 +68,7 @@ p {
   width: 100%;
   max-width: 75rem;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 clamp(1rem, 4vw, 2rem);
 }
 
 /* =========================================
@@ -78,6 +78,12 @@ p {
   background: var(--color-light);
   box-shadow: var(--shadow-soft);
   border-bottom: 1px solid #e5e7eb;
+  
+
+
+  /* update */
+  position: relative;
+  z-index: 1000;
 }
 
 .header__wrapper {
@@ -88,11 +94,42 @@ p {
 }
 
 .logo {
-  font-size: 1.6rem;
-  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;   /* space between icon and text */
   text-decoration: none;
+}
+.logo:hover {
+  transform: scale(1.03);
+  transition: 0.3s ease;
+}
+
+.logo img {
+  height: 60px;      /* Bigger */
+  width: auto;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.nav-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
   color: var(--color-dark);
 }
+
+
 
 .nav {
   display: flex;
@@ -101,6 +138,7 @@ p {
 
 .nav__link {
   text-decoration: none;
+  font-size: 1.1rem;
   font-weight: 500;
   color: var(--color-dark);
   position: relative;
@@ -130,6 +168,32 @@ p {
 .nav__link--active::after {
   width: 100%;
 }
+
+
+
+
+
+
+
+
+
+
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  z-index: 1500;
+}
+
+.nav-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 
 
 
@@ -670,3 +734,154 @@ p {
   padding-top: 1.5rem;
   border-top: 1px solid #e5e7eb;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+/* ===== Tablet (1024px and below) ===== */
+@media (max-width: 1024px) {
+
+  .hero__title {
+    font-size: 2.8rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.4rem;
+  }
+
+  .hero__stats {
+    gap: 2rem;
+  }
+
+  .impact__title,
+  .section__header h2,
+  .course-features__title,
+  .testimonials__title {
+    font-size: 2rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* ===== Tablet & Small Screens ===== */
+@media (max-width: 768px) {
+
+  .nav-toggle {
+    display: block;
+    font-size: 2rem;
+    z-index: 3000;
+  }
+
+  .header__wrapper {
+    padding: 0.8rem 1rem;
+  }
+
+  .logo img {
+    height: 50px;   /* Balanced mobile size */
+  }
+
+  .logo-text {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 75%;
+    height: 100vh;
+    background: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transition: right 0.4s ease;
+    box-shadow: -5px 0 20px rgba(0,0,0,0.15);
+    z-index: 2000;
+  }
+
+  .nav--open {
+    right: 0;
+  }
+
+  .nav__link {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+}
+
+
+
+
+
+
+
+/* ===== Mobile ===== */
+@media (max-width: 480px) {
+
+  .hero__badge {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.8rem;
+  }
+
+  .hero__title {
+    font-size: 1.8rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1rem;
+  }
+
+  .hero__text {
+    font-size: 0.9rem;
+  }
+
+  .stat h3 {
+    font-size: 1.6rem;
+  }
+
+  .impact-card__number {
+    font-size: 2rem;
+  }
+
+  .cta__title {
+    font-size: 1.8rem;
+  }
+
+  .cta__text {
+    font-size: 0.9rem;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
