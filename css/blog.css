@@ -114,3 +114,90 @@
   padding: 0.9rem 0;
   border-radius: 0.6rem;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== Tablet ===== */
+@media (max-width: 1024px) {
+
+  .blog__section-title {
+    font-size: 2rem;
+  }
+
+  .blog__grid {
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: 2rem;
+  }
+
+}
+
+
+
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+
+  .blog {
+    padding: 4rem 0;
+  }
+
+  .blog__header {
+    margin-bottom: 2.5rem;
+  }
+
+  .blog__section-title {
+    font-size: 1.8rem;
+  }
+
+  .blog__section-subtitle {
+    font-size: 0.95rem;
+    padding: 0 1rem;
+  }
+
+  .blog__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .blog-card__content {
+    padding: 1.5rem;
+  }
+
+}
+
+
+
+
+/* ===== Small Phones ===== */
+@media (max-width: 480px) {
+
+  .blog__section-title {
+    font-size: 1.5rem;
+  }
+
+  .blog-card__image {
+    height: 180px;
+  }
+
+  .blog-card__title {
+    font-size: 1.1rem;
+  }
+
+  .blog-card__excerpt {
+    font-size: 0.85rem;
+  }
+
+  .blog-card .btn {
+    padding: 0.8rem 0;
+  }
+
+}
