@@ -42,6 +42,7 @@
 
 .course-card {
   background: #ffffff;
+  border: 1px solid #e2e8f0;
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-soft);
@@ -130,4 +131,88 @@
 .course-card .btn {
   width: 100%;
   text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+/* ===== Tablet ===== */
+@media (max-width: 1024px) {
+
+  .courses-hero__title {
+    font-size: 2.3rem;
+  }
+
+  .courses__grid {
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  }
+
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+
+  .courses-hero {
+    padding: 4rem 0;
+  }
+
+  .courses-hero__title {
+    font-size: 2rem;
+  }
+
+  .courses-hero__subtitle {
+    font-size: 0.95rem;
+    padding: 0 1rem;
+  }
+
+  .courses {
+    padding: 4rem 0;
+  }
+
+  .courses__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .course-card__content {
+    padding: 1.5rem;
+  }
+
+  .course-card__title {
+    font-size: 1.2rem;
+  }
+
+}
+
+/* ===== Small Phones (≤ 480px) ===== */
+@media (max-width: 480px) {
+
+  .course-card__image img {
+    height: 180px;
+  }
+
+  .course-card__meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .price-new {
+    font-size: 1rem;
+  }
+
 }
