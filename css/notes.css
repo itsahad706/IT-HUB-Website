@@ -93,3 +93,105 @@
 .note-card .btn {
   margin-top: 0.5rem;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== Tablet ===== */
+@media (max-width: 1024px) {
+
+  .notes-section__header h2 {
+    font-size: 2rem;
+  }
+
+  .notes-grid {
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 2rem;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+
+  .notes-section {
+    padding: 4rem 0;
+  }
+
+  .notes-section__header {
+    margin-bottom: 2.5rem;
+  }
+
+  .notes-section__header h2 {
+    font-size: 1.8rem;
+  }
+
+  .notes-section__header p {
+    font-size: 0.95rem;
+    padding: 0 1rem;
+  }
+
+  .notes-grid {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+  }
+
+  .note-card {
+    padding: 2rem 1.5rem;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+/* ===== Small Phones ===== */
+@media (max-width: 480px) {
+
+  .notes-section__header h2 {
+    font-size: 1.5rem;
+  }
+
+  .note-card__img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .note-card__img img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .note-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .note-card p {
+    font-size: 0.85rem;
+  }
+
+}
