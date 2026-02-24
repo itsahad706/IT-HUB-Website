@@ -141,3 +141,119 @@
   margin: 1rem auto 0;
   border-radius: 10px;
 } */
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== Tablet ===== */
+@media (max-width: 1024px) {
+
+  .about-hero__title {
+    font-size: 2.6rem;
+  }
+
+  .about-section__title,
+  .about-team__title {
+    font-size: 2rem;
+  }
+
+  .about-team__grid {
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: 2rem;
+  }
+
+}
+
+
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+
+  .about-hero {
+    padding: 5rem 0;
+  }
+
+  .about-hero__title {
+    font-size: 2rem;
+  }
+
+  .about-hero__text {
+    font-size: 0.95rem;
+    padding: 0 1rem;
+  }
+
+  .about-section {
+    padding: 4rem 0;
+  }
+
+  .about-section__title {
+    font-size: 1.8rem;
+  }
+
+  .about-section__text {
+    padding: 0 1rem;
+    font-size: 0.95rem;
+  }
+
+  .about-team {
+    padding: 4rem 0;
+  }
+
+  .about-team__title {
+    font-size: 1.8rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .about-team__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .team-card {
+    padding: 2rem 1.5rem;
+  }
+
+}
+
+
+
+
+
+/* ===== Small Phones ===== */
+@media (max-width: 480px) {
+
+  .about-hero__title {
+    font-size: 1.6rem;
+  }
+
+  .about-hero__text {
+    font-size: 0.85rem;
+  }
+
+  .about-section__title,
+  .about-team__title {
+    font-size: 1.5rem;
+  }
+
+  .team-card__image {
+    width: 110px;
+    height: 110px;
+  }
+
+  .team-card__name {
+    font-size: 1.1rem;
+  }
+
+  .team-card__bio {
+    font-size: 0.85rem;
+  }
+
+}
