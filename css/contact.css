@@ -102,3 +102,96 @@
   font-size: 1rem;
   padding: 0.9rem;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== Tablet ===== */
+@media (max-width: 1024px) {
+
+  .contact__title {
+    font-size: 2.3rem;
+  }
+
+  .contact__grid {
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: 2.5rem;
+  }
+
+}
+
+
+
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+
+  .contact {
+    padding: 4rem 0;
+  }
+
+  .contact__header {
+    margin-bottom: 2.5rem;
+  }
+
+  .contact__title {
+    font-size: 2rem;
+  }
+
+  .contact__subtitle {
+    font-size: 0.95rem;
+    padding: 0 1rem;
+  }
+
+  .contact__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contact-form {
+    padding: 2rem 1.5rem;
+  }
+
+}
+
+
+
+/* ===== Small Phones ===== */
+@media (max-width: 480px) {
+
+  .contact__title {
+    font-size: 1.6rem;
+  }
+
+  .contact__subtitle {
+    font-size: 0.85rem;
+  }
+
+  .contact-info__item {
+    padding: 1.2rem;
+  }
+
+  .contact-form {
+    padding: 1.5rem 1rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .contact-form .btn {
+    font-size: 0.95rem;
+    padding: 0.8rem;
+  }
+
+}
